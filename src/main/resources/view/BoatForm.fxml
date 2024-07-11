@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="676.0" prefWidth="926.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.BoatFormController">
+    <children>
+        <ImageView fitHeight="676.0" fitWidth="926.0" opacity="0.5">
+            <image>
+                <Image url="@../assest/icon/back-view-woman-watching-dolphins-swim.jpg" />
+            </image>
+        </ImageView>
+        <Label layoutX="335.0" layoutY="24.0" text="Boat Manage">
+            <font>
+                <Font name="System Bold" size="30.0" />
+            </font>
+        </Label>
+        <TextField fx:id="txtBoat_Id" layoutX="23.0" layoutY="150.0" onAction="#txtSearchOnAction" opacity="0.84" prefHeight="29.0" prefWidth="249.0" />
+        <TextField fx:id="txtSheetCount" layoutX="663.0" layoutY="150.0" opacity="0.84" prefHeight="29.0" prefWidth="249.0" />
+        <TextField fx:id="txtBName" layoutX="334.0" layoutY="150.0" onAction="#searchBoatNameOnAction" opacity="0.84" prefHeight="29.0" prefWidth="249.0" />
+        <Label layoutX="23.0" layoutY="119.0" prefHeight="30.0" prefWidth="190.0" text="Boat Id">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="663.0" layoutY="119.0" prefHeight="30.0" prefWidth="190.0" text="Sheet Count">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="334.0" layoutY="119.0" prefHeight="30.0" prefWidth="190.0" text="Boat Name">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="txtB_Type" layoutX="334.0" layoutY="266.0" opacity="0.84" prefHeight="29.0" prefWidth="249.0" />
+        <Label layoutX="334.0" layoutY="235.0" prefHeight="30.0" prefWidth="190.0" text="Boat Type">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="txtDes" layoutX="23.0" layoutY="266.0" opacity="0.84" prefHeight="29.0" prefWidth="249.0" />
+        <Label layoutX="26.0" layoutY="234.0" prefHeight="30.0" prefWidth="190.0" text="Description">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <TableView fx:id="tblBoat" layoutX="18.0" layoutY="397.0" opacity="0.84" prefHeight="264.0" prefWidth="894.0">
+            <columns>
+                <TableColumn fx:id="colBaott_Id" prefWidth="100.0" text="Boat_Id" />
+                <TableColumn fx:id="colBoatName" prefWidth="200.0" text="Boat Name" />
+                <TableColumn fx:id="colBoatType" prefWidth="200.0" text="Boat Type" />
+                <TableColumn fx:id="colBoatSheetCount" prefWidth="179.0" text="Sheet Count" />
+                <TableColumn fx:id="colDesc" prefWidth="214.0" text="Description" />
+            </columns>
+        </TableView>
+        <JFXButton layoutX="774.0" layoutY="330.0" onAction="#btnSaveOnAction" prefHeight="35.0" prefWidth="124.0" style="-fx-background-color: ACD2FF;" text="SAVE">
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font>
+        </JFXButton>
+        <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="784.0" layoutY="338.0">
+            <image>
+                <Image url="@../assest/icon/icons8-add-30.png" />
+            </image>
+        </ImageView>
+        <JFXButton layoutX="605.0" layoutY="330.0" onAction="#btnUpdateOnAction" prefHeight="35.0" prefWidth="124.0" style="-fx-background-color: orange;" text="UPDATE">
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font>
+        </JFXButton>
+        <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="615.0" layoutY="338.0">
+            <image>
+                <Image url="@../assest/icon/icons8-update-64.png" />
+            </image>
+        </ImageView>
+        <JFXButton layoutX="436.0" layoutY="330.0" onAction="#btnDeleteOnAction" prefHeight="35.0" prefWidth="124.0" style="-fx-background-color: yellow;" text="DELETE">
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font>
+        </JFXButton>
+        <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="446.0" layoutY="338.0">
+            <image>
+                <Image url="@../assest/icon/icons8-delete-30.png" />
+            </image>
+        </ImageView>
+        <JFXButton layoutX="267.0" layoutY="330.0" onAction="#btnClearOnAction" prefHeight="35.0" prefWidth="124.0" style="-fx-background-color: ACFAFF;" text="CLEAR">
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font>
+        </JFXButton>
+        <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="277.0" layoutY="338.0">
+            <image>
+                <Image url="@../assest/icon/icons8-broom-50.png" />
+            </image>
+        </ImageView>
+        <Label layoutX="349.0" layoutY="247.0" prefHeight="29.0" prefWidth="0.0" />
+    </children>
+</AnchorPane>

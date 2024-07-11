@@ -1,0 +1,7 @@
+.lable{
+    -fx-font-size: 34px;
+    -fx-font-weight: bold;
+}
+.pane{
+    -fx-background-image: url("assest/img/img.png");
+}

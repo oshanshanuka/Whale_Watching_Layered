@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ridePane" prefHeight="676.0" prefWidth="926.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.RideFormController">
+    <children>
+        <ImageView fitHeight="676.0" fitWidth="926.0" opacity="0.5">
+            <image>
+                <Image url="@../assest/icon/back-view-woman-watching-dolphins-swim.jpg" />
+            </image>
+        </ImageView>
+        <Label layoutX="392.0" layoutY="14.0" prefHeight="55.0" prefWidth="269.0" text="Ride Manage">
+            <font>
+                <Font name="System Bold" size="30.0" />
+            </font>
+        </Label>
+        <TextField fx:id="txtPrice" layoutX="153.0" layoutY="180.0" opacity="0.84" prefHeight="29.0" prefWidth="249.0" />
+        <TextField fx:id="txtType" layoutX="152.0" layoutY="135.0" opacity="0.84" prefHeight="29.0" prefWidth="249.0" />
+        <Label layoutX="33.0" layoutY="133.0" prefHeight="30.0" prefWidth="62.0" text="Type">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="33.0" layoutY="180.0" prefHeight="30.0" prefWidth="118.0" text="One Person Price">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <TableView fx:id="tblRide" layoutX="28.0" layoutY="397.0" opacity="0.84" prefHeight="237.0" prefWidth="852.0">
+            <columns>
+                <TableColumn fx:id="colRideId" prefWidth="100.0" text="ride_Id" />
+                <TableColumn fx:id="colRDate" prefWidth="200.0" text="Date" />
+                <TableColumn fx:id="colType" prefWidth="150.0" text="Typ" />
+                <TableColumn fx:id="colPrice" prefWidth="150.0" text="One_Person_Price" />
+                <TableColumn fx:id="colRTime" prefWidth="150.0" text="Time" />
+                <TableColumn fx:id="colRStatus" prefWidth="100.0" text="Status" />
+            </columns>
+        </TableView>
+        <TextField fx:id="txtRideId" layoutX="152.0" layoutY="90.0" onAction="#btnSearchOnAction" opacity="0.84" prefHeight="29.0" prefWidth="249.0" />
+        <Label layoutX="33.0" layoutY="91.0" prefHeight="30.0" prefWidth="62.0" text="Ride Id">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <JFXButton layoutX="300.0" layoutY="348.0" onAction="#btnClearOnAction" prefHeight="35.0" prefWidth="124.0" style="-fx-background-color: ACFAFF;" text="CLEAR">
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font>
+        </JFXButton>
+        <JFXButton layoutX="750.0" layoutY="348.0" onAction="#btnSaveOnAction" prefHeight="35.0" prefWidth="124.0" style="-fx-background-color: ACD2FF;" text="ADD">
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font>
+        </JFXButton>
+        <JFXButton layoutX="450.0" layoutY="348.0" onAction="#btnDeleteOnAction" prefHeight="35.0" prefWidth="124.0" style="-fx-background-color: yellow;" text="DELETE">
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font>
+        </JFXButton>
+        <JFXButton layoutX="600.0" layoutY="348.0" onAction="#btnUpdateOnAction" prefHeight="35.0" prefWidth="124.0" style="-fx-background-color: orange;" text="UPDATE">
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font>
+        </JFXButton>
+        <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="760.0" layoutY="356.0">
+            <image>
+                <Image url="@../assest/icon/icons8-add-30.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="310.0" layoutY="357.0">
+            <image>
+                <Image url="@../assest/icon/icons8-broom-50.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="460.0" layoutY="357.0">
+            <image>
+                <Image url="@../assest/icon/icons8-delete-30.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="610.0" layoutY="355.0">
+            <image>
+                <Image url="@../assest/icon/icons8-update-64.png" />
+            </image>
+        </ImageView>
+        <JFXComboBox fx:id="cmbBoatId" layoutX="638.0" layoutY="122.0" onAction="#cmbBoatOnAction" prefHeight="25.0" prefWidth="124.0" />
+        <Label layoutX="640.0" layoutY="91.0" prefHeight="25.0" prefWidth="68.0" text="Boat Id">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <JFXButton layoutX="784.0" layoutY="123.0" onAction="#btnAddtoTable" prefHeight="25.0" prefWidth="92.0" style="-fx-background-color: pink;" text="Add To Table">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </JFXButton>
+        <TableView fx:id="tblBoats" layoutX="637.0" layoutY="157.0" opacity="0.84" prefHeight="141.0" prefWidth="239.0">
+            <columns>
+                <TableColumn prefWidth="138.0" text="Boat Name" />
+                <TableColumn prefWidth="100.0" text="Boat Type" />
+            </columns>
+        </TableView>
+        <Label layoutX="33.0" layoutY="224.0" prefHeight="30.0" prefWidth="108.0" text="Date">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="33.0" layoutY="270.0" prefHeight="30.0" prefWidth="100.0" text="Time">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="txtRTime" layoutX="153.0" layoutY="270.0" opacity="0.84" prefHeight="29.0" prefWidth="249.0" />
+        <DatePicker fx:id="txtRdate" layoutX="153.0" layoutY="223.0" prefHeight="30.0" prefWidth="249.0" />
+        <Label layoutX="33.0" layoutY="314.0" prefHeight="30.0" prefWidth="100.0" text="Status">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="txtRStatus" layoutX="153.0" layoutY="313.0" opacity="0.84" prefHeight="29.0" prefWidth="249.0" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.2.0.final using JasperReports Library version 6.2.0  -->
+<!-- 2024-05-09T14:26:06 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="BookingRideDetails" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="1e96d01f-4fe3-4b8b-a927-d1abd67c79ea">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter (8)"/>
+	<queryString>
+		<![CDATA[SELECT bo.booking_Id, c.name, r.ride_Id, r.time, r.typ, p.amount FROM booking bo JOIN customer c ON bo.cus_Id = c.cus_Id JOIN ride r ON bo.ride_Id = r.ride_Id JOIN payment p ON bo.pay_Id = p.pay_Id WHERE bo.cus_Id = 'C0001' AND bo.ride_Id = 'R001' AND bo.pay_Id = p.pay_Id]]>
+	</queryString>
+	<field name="booking_Id" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ride_Id" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="time" class="java.sql.Time">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="typ" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="amount" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="81" splitType="Stretch">
+			<rectangle>
+				<reportElement x="-20" y="0" width="595" height="81" backcolor="#999ADE" uuid="e889db7d-e4f1-4aee-bbd6-7c20722e2ce0"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="110" y="23" width="370" height="30" uuid="a3ea1437-d4a9-45c0-8056-a7ed39a8f74a"/>
+				<textElement>
+					<font size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Booking Ride Customer Details]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="-11" y="7" width="71" height="30" uuid="3d563f7e-be0d-4bb5-af34-effef2b792bf"/>
+				<text><![CDATA[booking_Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="71" y="7" width="69" height="30" uuid="9fcd87e6-a397-4d2e-8b8e-f1ab0b35070f"/>
+				<text><![CDATA[ride_Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="150" y="7" width="130" height="30" uuid="90777e3c-b8f6-448c-873a-c36ec3d25b48"/>
+				<text><![CDATA[name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="309" y="9" width="71" height="30" uuid="5b3ee1ae-580d-44d9-a45f-e9965ccc8530"/>
+				<text><![CDATA[typ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="391" y="9" width="100" height="30" uuid="6eb6368a-0bde-4981-8d25-0bc86d7dcc84"/>
+				<text><![CDATA[time]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="502" y="8" width="73" height="30" uuid="c28f0e3c-2b88-4d3a-ab2e-df3cfb5afa4d"/>
+				<text><![CDATA[amount]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="-11" y="50" width="71" height="30" uuid="c3eebb1b-a45e-4ffb-91ff-2e7c918ca857"/>
+				<textFieldExpression><![CDATA[$F{booking_Id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="71" y="49" width="69" height="30" uuid="df9f761a-ab8b-4ed1-8635-7d2c1010401b"/>
+				<textFieldExpression><![CDATA[$F{ride_Id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="151" y="48" width="130" height="30" uuid="80b9eef7-fb3b-49f0-b40b-79c292fcd63c"/>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="309" y="47" width="71" height="30" uuid="3abb978f-daec-417d-9a11-7b8d3c9fddfc"/>
+				<textFieldExpression><![CDATA[$F{typ}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="391" y="47" width="100" height="30" uuid="d200842f-8d13-4d58-9315-2d72dbc71d39"/>
+				<textFieldExpression><![CDATA[$F{time}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="502" y="46" width="73" height="30" uuid="04ed86f0-b267-4c99-a0a0-904012c2582c"/>
+				<textFieldExpression><![CDATA[$F{amount}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

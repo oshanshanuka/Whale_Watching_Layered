@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.2.0.final using JasperReports Library version 6.2.0  -->
+<!-- 2023-12-02T23:42:54 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SalaryDetails" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="319ebb4d-d0c7-407a-9cce-71ab0196f96f">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter (10)"/>
+	<queryString>
+		<![CDATA[select s.date,s.sal_Id,s.emp_Id,e.name,s.amount from salary s join employee e on s.emp_Id=e.emp_Id]]>
+	</queryString>
+	<field name="date" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="sal_Id" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="emp_Id" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="amount" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<group name="sal_Id">
+		<groupExpression><![CDATA[$F{sal_Id}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="83" splitType="Stretch">
+			<rectangle>
+				<reportElement x="-20" y="10" width="595" height="73" uuid="baf2e4d8-f1ea-4fd6-979b-3cd3ae0c6d78"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="174" y="34" width="220" height="30" uuid="b692352c-d95b-484b-82f3-d5548affdcc1"/>
+				<textElement>
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Employee Salary Details]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="4" y="0" width="100" height="30" uuid="a494186c-3884-45b7-bb9d-3d68bacc167a"/>
+				<text><![CDATA[date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="112" y="0" width="100" height="30" uuid="ffdc7524-38a6-4f2e-85e0-972126893b4e"/>
+				<text><![CDATA[sal_Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="224" y="0" width="100" height="30" uuid="c140da83-1c7a-4403-8149-36c2e8b549a0"/>
+				<text><![CDATA[emp_Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="338" y="0" width="100" height="30" uuid="51ebeb46-d3f9-4fe1-8631-47490c7e2236"/>
+				<text><![CDATA[name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="459" y="0" width="100" height="30" uuid="3b529c40-d661-46a6-ba5d-05f74180b43a"/>
+				<text><![CDATA[amount]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="4" y="23" width="100" height="30" uuid="2c5d0922-f9c7-463c-bd0c-32e8a29d74b5"/>
+				<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="112" y="23" width="100" height="30" uuid="214d68d9-cb99-444a-8993-5374013a5cd0"/>
+				<textFieldExpression><![CDATA[$F{sal_Id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="224" y="23" width="100" height="30" uuid="cf72a97d-e99a-43e8-bc75-75eb5f6951df"/>
+				<textFieldExpression><![CDATA[$F{emp_Id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="338" y="23" width="100" height="30" uuid="378a23a7-56df-4d8c-9cab-67853ec77d92"/>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="459" y="22" width="100" height="30" uuid="5af59506-89fc-42af-99af-755a1aa28ce2"/>
+				<textFieldExpression><![CDATA[$F{amount}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
